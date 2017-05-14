@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html class="mdc-typography">
   <head>
+    <title>Ben van Klingeren</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href ="css/style.css">
+    <script src="script/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="material-components-web/dist/material-components-web.css">
   </head>
-  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
-    <p>
-      To do:
-      <ul>
-        <li>create website</li>
-      </ul>
-    </p>
+    <div class="container">
+      <div class="container-top">
+        <h1>Ben van Klingeren</h1>
+      </div>
+      <div class="container-center">
+
+        <div class="mdc-card card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+            <h2 class="mdc-card__subtitle">Subtitle here</h2>
+          </section>
+          <section class="mdc-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+          </section>
+          <section class="mdc-card__actions">
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+          </section>
+        </div>
+
+        <div class="mdc-card card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+            <h2 class="mdc-card__subtitle">Subtitle here</h2>
+          </section>
+          <section class="mdc-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+          </section>
+          <section class="mdc-card__actions">
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+          </section>
+        </div>
+
+
+
+      </div>
+
+      <div class="container-bottom">
+      <p id="footer" class="mdc-typography--body1">website created by Ben van Klingeren.</p>
+      </div>
+    </div>  
+    <script src="material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
   </body>
 </html>
