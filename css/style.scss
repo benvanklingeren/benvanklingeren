@@ -1,12 +1,22 @@
+
+$mdc-theme-primary: #FFFFFF;
+$mdc-theme-accent: #ffab40;
+$mdc-theme-background: #fff;
+
 @import "@material/elevation/mixins";
+@import "@material/theme/mdc-theme";
+
 
 body{
 	margin: 0px;
 }
 
-h1{
-	margin: 5px;
-	margin-top: 10px;
+.mdc-toolbar{
+}
+
+#header{
+	margin-top: -1px;
+	@include mdc-theme-prop(background-color, primary);
 }
 
 .container{
