@@ -5,6 +5,7 @@ $mdc-theme-background: #fff;
 
 @import "../material-components-web/@material/elevation/mixins";
 @import "../material-components-web/@material/theme/mdc-theme";
+@import "../material-components-web/@material/animation/functions";
 
 
 body{
@@ -15,8 +16,13 @@ body{
 
 }
 
-#fab{
+.fabAnimation{
+	height: inherit;
+	width: 100%;
 	margin-left: 50%;
+	margin-top: 20vh;
+	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ 100ms);
+  	will-change: margin-top;	
 }
 
 .fabWrapper{
@@ -94,11 +100,5 @@ body{
 
 	#fab{
 		margin-left: -50%;
-	}
-
-	.fabWrapper{
-		position: fixed;
-		align-self: flex-end;
-		margin-top: 80vh;
 	}
 }

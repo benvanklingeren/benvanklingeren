@@ -1,10 +1,17 @@
-function expand(element) {
-	$('.card').removeClass('expand');
-    $(element).addClass('expand');
-}
-
-window.onclick = function (event) {
-    if (!event.target.matches('.card') && !event.target.matches('button')) {
-    	$('.card').removeClass('expand');
-    }
-}
+$(document).ready(function(){
+	$(window).scroll(function(){
+		
+		if ($(window).scrollTop() > 30)
+		{
+			$('.fabAnimation').css({
+				'margin-top'			: '0vh'
+			});
+		}
+		else
+		{
+			$('.fabAnimation').css({
+				'margin-top'			: '20vh'
+			});
+		}
+	});
+});

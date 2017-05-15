@@ -258,8 +258,13 @@
 body {
   margin: 0px; }
 
-#fab {
-  margin-left: 50%; }
+.fabAnimation {
+  height: inherit;
+  width: 100%;
+  margin-left: 50%;
+  margin-top: 20vh;
+  transition: margin-top 100ms 0ms cubic-bezier(0.4, 0, 1, 1);
+  will-change: margin-top; }
 
 .fabWrapper {
   position: fixed;
@@ -323,11 +328,6 @@ body {
     margin: 10px; }
 
   #fab {
-    margin-left: -50%; }
-
-  .fabWrapper {
-    position: fixed;
-    align-self: flex-end;
-    margin-top: 80vh; } }
+    margin-left: -50%; } }
 
 /*# sourceMappingURL=style.css.map */
