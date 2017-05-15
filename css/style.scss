@@ -1,27 +1,22 @@
-
+// My main Sass file.
 $mdc-theme-primary: #FFFFFF;
-$mdc-theme-accent: #ffab40;
+$mdc-theme-accent: #76ff03;
 $mdc-theme-background: #fff;
 
-@import "@material/elevation/mixins";
-@import "@material/theme/mdc-theme";
+@import "../material-components-web/@material/elevation/mixins";
+@import "../material-components-web/@material/theme/mdc-theme";
 
 
 body{
-	margin: 0px;
-	margin-top: -1px;
-}
-
-.mdc-toolbar{
+	margin: 0px; 
 }
 
 #header{
-	@include mdc-theme-prop(background-color, primary);
-	margin-top: 0px;
+	background-color: $mdc-theme-primary;
+	color: black;
 }
 
 .container{
-	margin-top: 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -76,5 +71,9 @@ body{
     /* For mobile phones: */
     .container-center{
     	width: 100%;
+    }
+
+    #header{
+    	margin-top: -20px;
     }
 }
