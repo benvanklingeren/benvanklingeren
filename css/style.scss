@@ -21,7 +21,7 @@ body{
 	width: 100%;
 	margin-left: 50%;
 	margin-top: 20vh;
-	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ 100ms);
+	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ 200ms);
   	will-change: margin-top;	
 }
 
