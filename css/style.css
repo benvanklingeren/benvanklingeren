@@ -260,9 +260,11 @@ body {
 
 #header {
   background-color: #FFFFFF;
-  background-color: var(--mdc-theme-primary, #FFFFFF); }
+  background-color: var(--mdc-theme-primary, #FFFFFF);
+  margin-top: 0px; }
 
 .container {
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: stretch;

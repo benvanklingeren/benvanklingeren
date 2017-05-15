@@ -16,9 +16,11 @@ body{
 
 #header{
 	@include mdc-theme-prop(background-color, primary);
+	margin-top: 0px;
 }
 
 .container{
+	margin-top: 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
