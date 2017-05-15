@@ -258,9 +258,13 @@
 body {
   margin: 0px; }
 
-#header {
-  background-color: #FFFFFF;
-  color: black; }
+#fab {
+  margin-left: 50%; }
+
+.fabWrapper {
+  position: fixed;
+  align-self: flex-end;
+  margin-top: 80vh; }
 
 .container {
   display: flex;
@@ -281,6 +285,9 @@ body {
   margin-bottom: 5px;
   box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14); }
 
+.card {
+  margin-top: 10px; }
+
 .container-center {
   display: flex;
   flex-direction: column;
@@ -299,9 +306,6 @@ body {
   margin: auto;
   margin-bottom: 0px; }
 
-.card {
-  margin: 10px; }
-
 #footer {
   color: grey;
   margin-right: 5px;
@@ -313,6 +317,17 @@ body {
     width: 100%; }
 
   #header {
-    margin-top: -1px; } }
+    margin-top: -1px; }
+
+  .card {
+    margin: 10px; }
+
+  #fab {
+    margin-left: -50%; }
+
+  .fabWrapper {
+    position: fixed;
+    align-self: flex-end;
+    margin-top: 80vh; } }
 
 /*# sourceMappingURL=style.css.map */

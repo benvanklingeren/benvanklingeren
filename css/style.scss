@@ -12,8 +12,17 @@ body{
 }
 
 #header{
-	background-color: $mdc-theme-primary;
-	color: black;
+
+}
+
+#fab{
+	margin-left: 50%;
+}
+
+.fabWrapper{
+	position: fixed;
+	align-self: flex-end;
+	margin-top: 80vh;
 }
 
 .container{
@@ -37,6 +46,10 @@ body{
 	@include mdc-elevation(7);
 }
 
+.card{
+	margin-top: 10px;
+}
+
 .container-center{
 	display: flex;	
 	flex-direction: column;
@@ -57,9 +70,7 @@ body{
 	margin-bottom: 0px;
 }
 
-.card{
-	margin: 10px;
-}
+
 
 #footer{
 	color: grey;
@@ -76,4 +87,18 @@ body{
     #header{
     	margin-top: -1px;
     }
+
+    .card{
+		margin: 10px;	
+	}
+
+	#fab{
+		margin-left: -50%;
+	}
+
+	.fabWrapper{
+		position: fixed;
+		align-self: flex-end;
+		margin-top: 80vh;
+	}
 }
