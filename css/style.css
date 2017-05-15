@@ -256,7 +256,8 @@
   background-color: var(--mdc-theme-accent, #ffab40) !important; }
 
 body {
-  margin: 0px; }
+  margin: 0px;
+  margin-top: -1px; }
 
 #header {
   background-color: #FFFFFF;
