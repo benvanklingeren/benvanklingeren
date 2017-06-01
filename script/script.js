@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-      $('#home').addClass("page-load-hover");
+      $('#home').addClass("hover");
    
 
 	$(window).scroll(function(){
@@ -36,8 +36,12 @@ $(document).ready(function(){
 	});
 });
 
-function removePageLoadHover(){
-	$('#home').removeClass("page-load-hover");
+function removeHover(){
+	$('.mobileBottomBarItem').removeClass("hover");
+}
+
+function addHover(el){
+	$(el).addClass("hover");
 }
 
 function move(number){

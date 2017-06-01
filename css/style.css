@@ -406,7 +406,7 @@ body {
     text-transform: initial !important;
     height: 100% !important; }
 
-  .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .page-load-hover {
+  .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .hover {
     color: #03a9f4 !important; }
 
   .mobileBottomBarItem > p {
