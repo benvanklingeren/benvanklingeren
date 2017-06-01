@@ -396,6 +396,9 @@ body {
     text-transform: initial !important;
     height: 100% !important; }
 
+  .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p {
+    color: #03a9f4 !important; }
+
   .mobileBottomBarItem > p {
     margin: 0px;
     font-size: 0.7em;
