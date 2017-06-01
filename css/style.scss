@@ -135,6 +135,7 @@ body{
     	display: flex !important;
     	flex-direction: row;
     	transition: mdc-animation-exit(/* $name: */ margin, /* $duration: */ $fast);
+    	will-change: margin;
     }
 
     .container-center{
