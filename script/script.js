@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
       $('#home').addClass("hover");
+      $('#home > p').addClass("hover");
    
 
 	$(window).scroll(function(){
@@ -38,10 +39,12 @@ $(document).ready(function(){
 
 function removeHover(){
 	$('.mobileBottomBarItem').removeClass("hover");
+	$('.mobileBottomBarItem > p').removeClass("hover");
 }
 
-function addHover(el){
-	$(el).addClass("hover");
+function addHover(id){
+	$('#' + id).addClass("hover");
+	$('#' + id + ' > p').addClass("hover");
 }
 
 function move(number){
