@@ -379,7 +379,7 @@ body {
     margin-bottom: -5px; }
 
   #mobileBottomBar > .mdc-toolbar__row {
-    margin-top: -3px;
+    margin-top: 0px;
     padding: 0px;
     display: flex;
     flex-direction: row; }
