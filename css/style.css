@@ -265,6 +265,18 @@
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-24 {
+  font-size: 24px; }
+
+.material-icons.md-36 {
+  font-size: 36px; }
+
+.material-icons.md-48 {
+  font-size: 48px; }
+
 body {
   margin: 0px; }
 
@@ -340,7 +352,7 @@ body {
   margin-right: 5px;
   margin-bottom: 5px; }
 
-.Mobile, .Mobile * {
+.mobile, .mobile * {
   display: none; }
 
 @media only screen and (max-width: 768px) {
@@ -357,7 +369,32 @@ body {
   .nonMobile, .nonMobile * {
     display: none; }
 
-  .Mobile, .Mobile * {
-    display: initial; } }
+  .mobile, .mobile * {
+    display: initial; }
+
+  #mobileBottomBar {
+    bottom: 0;
+    top: initial;
+    background-color: #FFFFFF;
+    margin-bottom: -5px; }
+
+  #mobileBottomBar > .mdc-toolbar__row {
+    margin-top: -3px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row; }
+
+  .mobileBottomBarItem {
+    height: 100%;
+    width: 25%;
+    color: #565656;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+
+  .mobileBottomBarItem > p {
+    margin: 0px;
+    font-size: 0.7em; } }
 
 /*# sourceMappingURL=style.css.map */
