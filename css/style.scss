@@ -7,7 +7,8 @@ $accent: #03a9f4;
 $accent-light: #67daff;
 $accent-dark: #007ac1;
 
-$background: #fff;
+$background: #F5F5F6;
+$background-light: #FFFFFF;
 
 $text-dark: #000000;
 $text-light: #FFFFFF;
@@ -68,7 +69,7 @@ body{
 	height: auto;
 	width: 100vw;
 	min-height: 100vh;
-	background-color: white;
+	transition: mdc-animation-exit(/* $name: */ background-color, /* $duration: */ $fast);
 }
 
 .container-top{
@@ -84,6 +85,7 @@ body{
 
 .card{
 	margin-top: 10px;
+	background-color: white;
 }
 
 .container-center{
@@ -91,7 +93,6 @@ body{
 	flex-direction: column;
 	height: 100%;
 	width: 70%;
-	background-color: white;
 	margin: auto;
 	margin-top: 0px;
 }
@@ -112,6 +113,10 @@ body{
 	margin-bottom: 5px;
 }
 
+.Mobile, .Mobile *{
+		display: none;
+	}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .container-center{
@@ -128,5 +133,9 @@ body{
 
 	.nonMobile, .nonMobile *{
 		display: none;
+	}
+
+	.Mobile, .Mobile *{
+		display: initial;
 	}
 }

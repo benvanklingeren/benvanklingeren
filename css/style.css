@@ -301,7 +301,7 @@ body {
   height: auto;
   width: 100vw;
   min-height: 100vh;
-  background-color: white; }
+  transition: background-color 200ms 0ms cubic-bezier(0.4, 0, 1, 1); }
 
 .container-top {
   z-index: 2;
@@ -314,14 +314,14 @@ body {
   box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14); }
 
 .card {
-  margin-top: 10px; }
+  margin-top: 10px;
+  background-color: white; }
 
 .container-center {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 70%;
-  background-color: white;
   margin: auto;
   margin-top: 0px; }
 
@@ -339,6 +339,9 @@ body {
   margin-right: 5px;
   margin-bottom: 5px; }
 
+.Mobile, .Mobile * {
+  display: none; }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .container-center {
@@ -351,6 +354,9 @@ body {
     margin: 10px; }
 
   .nonMobile, .nonMobile * {
-    display: none; } }
+    display: none; }
+
+  .Mobile, .Mobile * {
+    display: initial; } }
 
 /*# sourceMappingURL=style.css.map */
