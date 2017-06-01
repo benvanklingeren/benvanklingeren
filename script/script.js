@@ -10,6 +10,10 @@ $(document).ready(function(){
 			$('.container').css({
 				'background-color'			: '#F5F5F6'
 			});
+
+			$('.container-center').css({
+				'background-color'			: '#F5F5F6'
+			});
 		}
 		else
 		{
@@ -18,6 +22,10 @@ $(document).ready(function(){
 			});
 
 			$('.container').css({
+				'background-color'			: '#FFFFFF'
+			});
+
+			$('.container-center').css({
 				'background-color'			: '#FFFFFF'
 			});
 		}
