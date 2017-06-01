@@ -49,4 +49,5 @@ function addHover(id){
 
 function move(number){
 	$('.container-center-big').css({'margin-left' : '-' + number +'%'});
+	$(window).scrollTop(0);
 }
