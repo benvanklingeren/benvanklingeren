@@ -104,19 +104,19 @@
  * ```
  */
 :root {
-  --mdc-theme-primary: #FFFFFF;
-  --mdc-theme-accent: #76ff03;
+  --mdc-theme-primary: #303F9F;
+  --mdc-theme-accent: #ff4081;
   --mdc-theme-background: #fff;
-  --mdc-theme-text-primary-on-primary: rgba(0, 0, 0, 0.87);
-  --mdc-theme-text-secondary-on-primary: rgba(0, 0, 0, 0.54);
-  --mdc-theme-text-hint-on-primary: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-disabled-on-primary: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-icon-on-primary: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-primary-on-accent: rgba(0, 0, 0, 0.87);
-  --mdc-theme-text-secondary-on-accent: rgba(0, 0, 0, 0.54);
-  --mdc-theme-text-hint-on-accent: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-disabled-on-accent: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-icon-on-accent: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-primary: white;
+  --mdc-theme-text-secondary-on-primary: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-primary: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-primary: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-primary: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-primary-on-accent: white;
+  --mdc-theme-text-secondary-on-accent: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-accent: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-accent: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-accent: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
   --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
   --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
@@ -139,52 +139,52 @@
   background-color: var(--mdc-theme-background, #fff); }
 
 .mdc-theme--primary {
-  color: #FFFFFF !important;
-  color: var(--mdc-theme-primary, #FFFFFF) !important; }
+  color: #303F9F !important;
+  color: var(--mdc-theme-primary, #303F9F) !important; }
 
 .mdc-theme--accent {
-  color: #76ff03 !important;
-  color: var(--mdc-theme-accent, #76ff03) !important; }
+  color: #ff4081 !important;
+  color: var(--mdc-theme-accent, #ff4081) !important; }
 
 .mdc-theme--text-primary-on-primary {
-  color: rgba(0, 0, 0, 0.87) !important;
-  color: var(--mdc-theme-text-primary-on-primary, rgba(0, 0, 0, 0.87)) !important; }
+  color: white !important;
+  color: var(--mdc-theme-text-primary-on-primary, white) !important; }
 
 .mdc-theme--text-secondary-on-primary {
-  color: rgba(0, 0, 0, 0.54) !important;
-  color: var(--mdc-theme-text-secondary-on-primary, rgba(0, 0, 0, 0.54)) !important; }
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: var(--mdc-theme-text-secondary-on-primary, rgba(255, 255, 255, 0.7)) !important; }
 
 .mdc-theme--text-hint-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-hint-on-primary, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-hint-on-primary, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-disabled-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-disabled-on-primary, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-disabled-on-primary, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-icon-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-icon-on-primary, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-icon-on-primary, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-primary-on-accent {
-  color: rgba(0, 0, 0, 0.87) !important;
-  color: var(--mdc-theme-text-primary-on-accent, rgba(0, 0, 0, 0.87)) !important; }
+  color: white !important;
+  color: var(--mdc-theme-text-primary-on-accent, white) !important; }
 
 .mdc-theme--text-secondary-on-accent {
-  color: rgba(0, 0, 0, 0.54) !important;
-  color: var(--mdc-theme-text-secondary-on-accent, rgba(0, 0, 0, 0.54)) !important; }
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: var(--mdc-theme-text-secondary-on-accent, rgba(255, 255, 255, 0.7)) !important; }
 
 .mdc-theme--text-hint-on-accent {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-hint-on-accent, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-hint-on-accent, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-disabled-on-accent {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-disabled-on-accent, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-disabled-on-accent, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-icon-on-accent {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-icon-on-accent, rgba(0, 0, 0, 0.38)) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-icon-on-accent, rgba(255, 255, 255, 0.5)) !important; }
 
 .mdc-theme--text-primary-on-background {
   color: rgba(0, 0, 0, 0.87) !important;
@@ -248,15 +248,31 @@
 
 /* CSS rules for using primary and accent as background colors. */
 .mdc-theme--primary-bg {
-  background-color: #FFFFFF !important;
-  background-color: var(--mdc-theme-primary, #FFFFFF) !important; }
+  background-color: #303F9F !important;
+  background-color: var(--mdc-theme-primary, #303F9F) !important; }
 
 .mdc-theme--accent-bg {
-  background-color: #76ff03 !important;
-  background-color: var(--mdc-theme-accent, #76ff03) !important; }
+  background-color: #ff4081 !important;
+  background-color: var(--mdc-theme-accent, #ff4081) !important; }
 
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 body {
   margin: 0px; }
+
+#header {
+  background-color: #FFFFFF; }
+
+.mdc-toolbar__title {
+  color: #007ac1; }
 
 .fabAnimation {
   height: inherit;
@@ -265,6 +281,13 @@ body {
   margin-top: 20vh;
   transition: margin-top 200ms 0ms cubic-bezier(0.4, 0, 1, 1);
   will-change: margin-top; }
+
+#fab {
+  background-color: #03a9f4;
+  color: #FFFFFF; }
+
+#fab:hover > i {
+  animation: spin 200ms 0ms cubic-bezier(0, 0, 0.2, 1); }
 
 .fabWrapper {
   position: fixed;
@@ -312,7 +335,7 @@ body {
   margin-bottom: 0px; }
 
 #footer {
-  color: grey;
+  color: #cccccc;
   margin-right: 5px;
   margin-bottom: 5px; }
 
@@ -327,7 +350,7 @@ body {
   .card {
     margin: 10px; }
 
-  .fabAnimation {
-    margin-left: -50%; } }
+  .nonMobile, .nonMobile * {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,28 @@
-// My main Sass file.
-$mdc-theme-primary: #FFFFFF;
-$mdc-theme-accent: #76ff03;
-$mdc-theme-background: #fff;
+// colour palette
+$primary: #FFFFFF;
+$primary-light: #FFFFFF;
+$primary-dark: #cccccc;
+
+$accent: #03a9f4;
+$accent-light: #67daff;
+$accent-dark: #007ac1;
+
+$background: #fff;
+
+$text-dark: #000000;
+$text-light: #FFFFFF;
+
+// speeds
+$fast: 200ms;
 
 @import "../material-components-web/@material/elevation/mixins";
 @import "../material-components-web/@material/theme/mdc-theme";
 @import "../material-components-web/@material/animation/functions";
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 
 
 body{
@@ -13,7 +30,11 @@ body{
 }
 
 #header{
+	background-color: $primary;
+}
 
+.mdc-toolbar__title{
+	color: $accent-dark;
 }
 
 .fabAnimation{
@@ -21,8 +42,17 @@ body{
 	width: 100%;
 	margin-left: 50%;
 	margin-top: 20vh;
-	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ 200ms);
+	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ $fast);
   	will-change: margin-top;	
+}
+
+#fab{
+	background-color: $accent;
+	color: $text-light; 
+}
+
+#fab:hover > i{
+	animation: mdc-animation-enter(spin, $fast);
 }
 
 .fabWrapper{
@@ -76,10 +106,8 @@ body{
 	margin-bottom: 0px;
 }
 
-
-
 #footer{
-	color: grey;
+	color: $primary-dark;
 	margin-right: 5px;
 	margin-bottom: 5px;
 }
@@ -98,7 +126,7 @@ body{
 		margin: 10px;	
 	}
 
-	.fabAnimation{
-		margin-left: -50%;
+	.nonMobile, .nonMobile *{
+		display: none;
 	}
 }
