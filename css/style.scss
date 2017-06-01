@@ -134,7 +134,11 @@ body{
     	width: 400%;
     	display: flex !important;
     	flex-direction: row;
-    	transition: mdc-animation-exit(/* $name: */ margin, /* $duration: */ $fast);
+    	//transition: mdc-animation-exit(/* $name: */ margin, /* $duration: */ $fast);
+    	-webkit-transition: all 0.2s ease-in-out;
+  		-moz-transition: all 0.2s ease-in-out;
+  		-o-transition: all 0.2s ease-in-out;
+  		transition: all 0.2s ease-in-out;
     	will-change: margin;
     }
 
