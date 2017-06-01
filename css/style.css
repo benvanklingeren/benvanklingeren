@@ -387,15 +387,18 @@ body {
   .mobileBottomBarItem {
     height: 100%;
     width: 25%;
-    color: #565656;
-    display: flex;
+    color: #565656 !important;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-weight: bold; }
+    line-height: initial !important;
+    text-transform: initial !important;
+    height: 100% !important; }
 
   .mobileBottomBarItem > p {
     margin: 0px;
-    font-size: 0.7em; } }
+    font-size: 0.7em;
+    color: #565656 !important; } }
 
 /*# sourceMappingURL=style.css.map */
