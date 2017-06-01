@@ -95,6 +95,7 @@ body{
 	width: 70%;
 	margin: auto;
 	margin-top: 0px;
+	transition: mdc-animation-exit(/* $name: */ background-color, /* $duration: */ $fast);
 }
 
 .container-bottom{
