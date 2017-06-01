@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+      $('#home').addClass("page-load-hover");
+   
+
 	$(window).scroll(function(){
 		
 		if ($(window).scrollTop() > 30)
@@ -31,3 +35,11 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function removePageLoadHover(){
+	$('#home').removeClass("page-load-hover");
+}
+
+function move(number){
+	$('.container-center-big').css({'margin-left' : '-' + number +'%'});
+}

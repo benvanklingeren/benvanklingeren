@@ -33,6 +33,7 @@ body{
 	margin: 0px; 
 }
 
+
 #header{
 	background-color: $primary;
 }
@@ -123,6 +124,19 @@ body{
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+
+	html, body {
+	    max-width: 100%;
+	    overflow-x: hidden;
+	}
+
+    .container-center-big{
+    	width: 400%;
+    	display: flex !important;
+    	flex-direction: row;
+    	transition: mdc-animation-exit(/* $name: */ margin, /* $duration: */ $fast);
+    }
+
     .container-center{
     	width: 100%;
     }
@@ -170,7 +184,7 @@ body{
 		height: 100% !important;
 	}
 
-	.mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p {
+	.mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .page-load-hover{
 		color: $accent !important;
 	}
 

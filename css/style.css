@@ -357,6 +357,16 @@ body {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden; }
+
+  .container-center-big {
+    width: 400%;
+    display: flex !important;
+    flex-direction: row;
+    transition: margin 200ms 0ms cubic-bezier(0.4, 0, 1, 1); }
+
   .container-center {
     width: 100%; }
 
@@ -396,7 +406,7 @@ body {
     text-transform: initial !important;
     height: 100% !important; }
 
-  .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p {
+  .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .page-load-hover {
     color: #03a9f4 !important; }
 
   .mobileBottomBarItem > p {
