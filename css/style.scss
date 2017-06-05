@@ -20,14 +20,11 @@ $fast: 200ms;
 @import "../material-components-web/@material/theme/mdc-theme";
 @import "../material-components-web/@material/animation/functions";
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+
 
 body{
 	margin: 0px; 
@@ -43,21 +40,45 @@ body{
 }
 
 .fabAnimation{
-	height: inherit;
+	height: 200px;
 	width: 100%;
 	margin-left: 50%;
-	margin-top: 20vh;
 	transition: mdc-animation-exit(/* $name: */ margin-top, /* $duration: */ $fast);
   	will-change: margin-top;	
+  	display: flex;
+  	align-items: flex-end;
 }
 
 #fab{
 	background-color: $accent;
 	color: $text-light; 
+	z-index: 5;
 }
 
-#fab:hover > i{
-	animation: mdc-animation-enter(spin, $fast);
+.fabAnimation:hover > #fab > i{
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform:rotate(360deg);
+	transition: all 0.3s ease-in-out;
+}
+
+#fab > i{
+	-moz-transform: rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
+	transform:rotate(-360deg);
+	transition: all 0.3s ease-in-out;
+}
+
+#linkedin{
+	z-index: 4;
+	position: absolute;
+	transform: translate(8px, -8px);
+	transition: transform 0.1s ease-in-out !important;
+}
+
+.move{
+	transform: translate(8px, -65px) !important;
+	transition: transform 0.1s ease-in-out !important;
 }
 
 .fabWrapper{
