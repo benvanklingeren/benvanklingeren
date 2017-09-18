@@ -92,7 +92,6 @@ body{
 	flex-direction: column;
 	align-items: stretch;
 	height: auto;
-	width: 100vw;
 	min-height: 100vh;
 	transition: mdc-animation-exit(/* $name: */ background-color, /* $duration: */ $fast);
 }
