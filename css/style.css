@@ -484,7 +484,7 @@ body {
   display: none; }
 
 #testCard {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/background-min.jpg");
   background-size: cover;
   height: 400px; }
 
