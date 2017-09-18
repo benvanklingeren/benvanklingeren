@@ -399,7 +399,7 @@ body {
   height: 200px;
   width: 100%;
   margin-left: 50%;
-  transition: mdc-animation-exit(margin-top, 200ms);
+  transition: margin-top 200ms, ease-all;
   will-change: margin-top;
   display: flex;
   align-items: flex-end; }
@@ -465,7 +465,7 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 0px;
-  transition: mdc-animation-exit(background-color, 200ms); }
+  transition: background-color 200ms, ease-all; }
 
 .container-bottom {
   display: flex;
