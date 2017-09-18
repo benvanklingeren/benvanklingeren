@@ -26,7 +26,7 @@ $(document).ready(function(){
 		else
 		{
 			$('.fabAnimation').css({
-				'margin-top'			: '50%'
+				'margin-top'			: '200%'
 			});
 
 			$('.container').css({
