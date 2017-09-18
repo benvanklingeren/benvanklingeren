@@ -104,7 +104,7 @@ body{
 	width: 100vw;
 	margin-top: 0px;
 	margin-bottom: 5px;
-	@include mdc-elevation(7);
+	@include mdc-elevation(7);    
 }
 
 .card{
@@ -209,7 +209,6 @@ body{
 		flex-direction: column;
 		line-height: initial !important;
 		text-transform: initial !important;
-		height: 100% !important;
 	}
 
 	.mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .hover{
