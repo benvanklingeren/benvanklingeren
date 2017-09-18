@@ -506,7 +506,8 @@ body {
     margin-bottom: 50px; }
 
   #header {
-    margin-top: -1px; }
+    margin-top: -1px;
+    position: initial; }
 
   .card {
     margin: 5px; }
