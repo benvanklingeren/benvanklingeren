@@ -483,6 +483,11 @@ body {
 .mobile, .mobile * {
   display: none; }
 
+#testCard {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  height: 400px; }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   html, body {
@@ -523,6 +528,9 @@ body {
     padding: 0px;
     display: flex;
     flex-direction: row; }
+
+  #mobileBottomBar > .mdc-toolbar__row > .mdc-button {
+    border-radius: 0px; }
 
   .mobileBottomBarItem {
     height: 56px !important;
