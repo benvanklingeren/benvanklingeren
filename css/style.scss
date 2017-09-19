@@ -93,7 +93,7 @@ body{
 	align-items: stretch;
 	height: auto;
 	min-height: 100vh;
-	transition: mdc-animation-exit(/* $name: */ background-color, /* $duration: */ $fast);
+	transition: background-color $fast, ease-all;
 }
 
 .container-top{
@@ -110,6 +110,23 @@ body{
 .card{
 	margin-top: 10px;
 	background-color: white;
+}
+
+.imageCard > section {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fractionCards{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.leftCard{
+	margin-right: 5px;
+}
+
+.rightCard{
+	margin-left: 5px;
 }
 
 .container-center{
@@ -141,7 +158,7 @@ body{
 		display: none;
 	}
 
-#testCard{
+#introCard{
 	background-image: url("../images/background-min.jpg");
 	background-size: cover;
 	height: 400px;
@@ -153,6 +170,18 @@ body{
 	html, body {
 	    max-width: 100%;
 	    overflow-x: hidden;
+	}
+
+	.fractionCards{
+		display: initial;
+	}
+	
+	.leftCard{
+		margin-right: initial;
+	}
+	
+	.rightCard{
+		margin-left: initial;
 	}
 
     .container-center-big{

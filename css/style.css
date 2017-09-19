@@ -442,7 +442,7 @@ body {
   align-items: stretch;
   height: auto;
   min-height: 100vh;
-  transition: mdc-animation-exit(background-color, 200ms); }
+  transition: background-color 200ms, ease-all; }
 
 .container-top {
   z-index: 2;
@@ -457,6 +457,19 @@ body {
 .card {
   margin-top: 10px;
   background-color: white; }
+
+.imageCard > section {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.fractionCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.leftCard {
+  margin-right: 5px; }
+
+.rightCard {
+  margin-left: 5px; }
 
 .container-center {
   display: flex;
@@ -483,7 +496,7 @@ body {
 .mobile, .mobile * {
   display: none; }
 
-#testCard {
+#introCard {
   background-image: url("../images/background-min.jpg");
   background-size: cover;
   height: 400px; }
@@ -493,6 +506,15 @@ body {
   html, body {
     max-width: 100%;
     overflow-x: hidden; }
+
+  .fractionCards {
+    display: initial; }
+
+  .leftCard {
+    margin-right: initial; }
+
+  .rightCard {
+    margin-left: initial; }
 
   .container-center-big {
     width: 400%;
