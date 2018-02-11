@@ -39,12 +39,17 @@ body{
 	color: $accent-dark;
 }
 
+.icon-twitter:before, 
 .icon-twitter:before {
 	content: "\ea96";
   }
 
-  .icon-linkedin:before {
-	content: "\eac9";
+  .twitterButton {
+	  color: #1DA1F2;
+  }
+
+  .linkedinButton {
+	  color: #0077B5;
   }
 
 .fabAnimation{
