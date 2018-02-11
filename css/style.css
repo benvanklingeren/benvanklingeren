@@ -396,7 +396,7 @@ body {
   color: #007ac1; }
 
 .toolbar {
-  align-items: center; }
+  align-items: center !important; }
 
 .icon-twitter:before,
 .icon-twitter:before {
