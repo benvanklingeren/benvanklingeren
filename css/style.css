@@ -399,10 +399,10 @@ body {
 .icon-twitter:before {
   content: "\ea96"; }
 
-.twitterButton {
+#twitterButton {
   color: #1DA1F2; }
 
-.linkedinButton {
+#linkedinButton {
   color: #0077B5; }
 
 .fabAnimation {
