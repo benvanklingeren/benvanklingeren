@@ -395,6 +395,9 @@ body {
 .mdc-toolbar__title {
   color: #007ac1; }
 
+.icon-twitter:before {
+  content: "\ea96"; }
+
 .fabAnimation {
   height: 200px;
   width: 100%;
