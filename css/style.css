@@ -520,8 +520,7 @@ body {
   background-image: url("../images/background-min.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
-  margin-top: 60px; }
+  height: 400px; }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -541,7 +540,8 @@ body {
   .container-center-big {
     width: 400%;
     display: flex !important;
-    flex-direction: row; }
+    flex-direction: row;
+    margin-top: 15%; }
 
   .container-center {
     width: 100%; }

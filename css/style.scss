@@ -188,7 +188,6 @@ body{
 	background-size: cover;
 	background-position: center;
 	height: 400px;
-	margin-top: 60px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -214,7 +213,8 @@ body{
     .container-center-big{
     	width: 400%;
     	display: flex !important;
-    	flex-direction: row;
+		flex-direction: row;
+		margin-top: 15%;
     	//transition: mdc-animation-exit(/* $name: */ margin, /* $duration: */ $fast);
     	//-webkit-transition: all 0.2s ease-in-out;
   		//-moz-transition: all 0.2s ease-in-out;
