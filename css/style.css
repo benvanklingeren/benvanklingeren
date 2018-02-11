@@ -398,6 +398,9 @@ body {
 .icon-twitter:before {
   content: "\ea96"; }
 
+.icon-linkedin:before {
+  content: "\eac9"; }
+
 .fabAnimation {
   height: 200px;
   width: 100%;
