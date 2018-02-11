@@ -500,7 +500,8 @@ body {
   background-image: url("../images/background-min.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px; }
+  height: 400px;
+  margin-top: 60px; }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -527,10 +528,6 @@ body {
 
   .container-bottom {
     margin-bottom: 50px; }
-
-  #header {
-    margin-top: -1px;
-    position: initial; }
 
   .card {
     margin: 5px; }

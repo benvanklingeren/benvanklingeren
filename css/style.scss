@@ -163,6 +163,7 @@ body{
 	background-size: cover;
 	background-position: center;
 	height: 400px;
+	margin-top: 60px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -206,8 +207,7 @@ body{
     }
 
     #header{
-		margin-top: -1px;
-		position: initial;
+		//margin-top: -1px;
     }
 
     .card{
