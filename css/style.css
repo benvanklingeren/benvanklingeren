@@ -499,6 +499,7 @@ body {
 #introCard {
   background-image: url("../images/background-min.jpg");
   background-size: cover;
+  background-position: center;
   height: 400px; }
 
 @media only screen and (max-width: 768px) {
