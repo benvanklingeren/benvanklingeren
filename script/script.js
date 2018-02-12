@@ -65,9 +65,11 @@ function switchBack(){
 
 function moveFABs(){
 	$('#linkedin').addClass("move");
+	$('#twitter').addClass("moveT");
 }
 
 function moveFABsBack(){
 	$('#linkedin').removeClass("move");
+	$('#twitter').removeClass("moveT");
 }
 

@@ -441,11 +441,29 @@ body {
   z-index: 4;
   position: absolute;
   transform: translate(8px, -8px);
-  transition: transform 0.1s ease-in-out !important; }
+  transition: transform 0.1s ease-in-out !important;
+  background-color: #0077B5; }
+
+#linkedin > .icon-linkedin {
+  transform: scale(0.8); }
+
+#twitter {
+  z-index: 4;
+  position: absolute;
+  transform: translate(8px, -8px);
+  transition: transform 0.3s ease-in-out !important;
+  background-color: #1DA1F2; }
+
+#twitter > .icon-twitter {
+  transform: scale(0.8); }
 
 .move {
   transform: translate(8px, -65px) !important;
   transition: transform 0.1s ease-in-out !important; }
+
+.moveT {
+  transition: transform 0.3s ease-in-out !important;
+  transform: translate(8px, -110px) !important; }
 
 .fabWrapper {
   position: fixed;
