@@ -246,7 +246,6 @@ body{
 		bottom:0;
 		top: initial;
 		background-color: $primary;
-		margin-bottom: -5px;
 	}
 
 	#mobileBottomBar > .mdc-toolbar__row{
@@ -274,11 +273,13 @@ body{
 
 	.mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .hover{
 		color: $accent !important;
+		transition: all 0.2s ease-in-out;
 	}
 
 	.mobileBottomBarItem > p{
 		margin: 0px;
-		font-size: 0.7em;
+		margin-top: 5px;
+		font-size: 0.8em;
 		//color: #565656 !important;
 	}
 }

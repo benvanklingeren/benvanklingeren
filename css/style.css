@@ -557,8 +557,7 @@ body {
   #mobileBottomBar {
     bottom: 0;
     top: initial;
-    background-color: #FFFFFF;
-    margin-bottom: -5px; }
+    background-color: #FFFFFF; }
 
   #mobileBottomBar > .mdc-toolbar__row {
     margin-top: 0px;
@@ -581,10 +580,12 @@ body {
     text-transform: initial !important; }
 
   .mobileBottomBarItem:hover, .mobileBottomBarItem:hover > p, .hover {
-    color: #03a9f4 !important; }
+    color: #03a9f4 !important;
+    transition: all 0.2s ease-in-out; }
 
   .mobileBottomBarItem > p {
     margin: 0px;
-    font-size: 0.7em; } }
+    margin-top: 5px;
+    font-size: 0.8em; } }
 
 /*# sourceMappingURL=style.css.map */
