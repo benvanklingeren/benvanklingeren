@@ -554,11 +554,11 @@ body {
   .mobile, .mobile * {
     display: initial; }
 
-  #mobileBottomBar {
+  .mobileBottomBar {
     bottom: 0;
-    top: initial;
     background-color: #FFFFFF;
-    margin-bottom: -5px; }
+    width: 100%;
+    position: fixed !important; }
 
   #mobileBottomBar > .mdc-toolbar__row {
     margin-top: 0px;
