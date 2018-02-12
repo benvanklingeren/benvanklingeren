@@ -185,18 +185,6 @@ body{
 	height: 400px;
 }
 
-@import "variables";
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('#{$icomoon-font-path}/icomoon.eot?yy4wj1');
-  src:  url('#{$icomoon-font-path}/icomoon.eot?yy4wj1#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icomoon.ttf?yy4wj1') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?yy4wj1') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?yy4wj1#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
 
