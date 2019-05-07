@@ -59,16 +59,23 @@
               border-radius: 5px;
               flex-grow: 1;
             }
-
-            .expandMenu{
-              background-color: white;
-              height:40%;
+            .menu{
+              z-index: 20;
+              height:auto;
+              position: fixed;
+              width: 100vw;
+              max-height:0px;
               border-bottom-left-radius: 5px;
               border-bottom-right-radius: 5px;
+              background-color: white;
               overflow: hidden;
+              transition: max-height ease-in-out 0.5s;
+            }
+
+            .expandMenu{
+              max-height:200px;
               box-shadow: 1px 1px 10px 0px #000000;
-              transition: all ease-in-out;
-              transition-duration: 0.5s;
+              transition: max-height ease-in-out 0.5s;
             }
 
             .fromTop {
@@ -92,8 +99,7 @@
           </style>  
 </head>
   <body>
-    <nav [class]="visible? 'navbar is-fixed-top is-transparent expandMenu' : 'navbar is-fixed-top is-transparent'" 
-      class="navbar is-fixed-top is-transparent fromTop" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top is-transparent fromTop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <div class="navbar-item">
             <img src="logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox" width="28" height="28">
@@ -108,6 +114,14 @@
           </div>
         </div>
     </nav>
+    <div [class]="visible? 'menu expandMenu' : 'menu'"
+         class="menu">
+         <section class="section">
+           <div class="container">
+             <p>I'm a menu</p>
+            </div>
+        </section>
+    </div>
     <section class="section">
       <div class="container">
         <div class="columns">
