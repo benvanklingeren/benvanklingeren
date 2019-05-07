@@ -8,6 +8,14 @@
     <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
@@ -33,19 +41,70 @@
             .navbar{
               background-color: transparent;
             }
+            .menu-item{
+              margin-left: auto;
+            }
+            #menu-button{
+              background-color: transparent;
+              color: white;
+              border: none;
+              text-shadow: .5px .5px 2px black;
+            }
             .column{
               height: 100vh;
+              display: flex;
+              align-items: center;
             }
             .card{
               border-radius: 5px;
+              flex-grow: 1;
+            }
+
+            .expandMenu{
+              background-color: white;
+              height:40%;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              overflow: hidden;
+              box-shadow: 1px 1px 10px 0px #000000;
+              transition: all ease-in-out;
+              transition-duration: 0.5s;
+            }
+
+            .fromTop {
+              animation-duration: 1.5s;
+              animation-name: fromTop;
+            }
+
+            @keyframes fromTop {
+              from {
+                margin-top:-10%;
+              }
+
+              60%{
+                margin-top: -10%;
+              }
+
+              to {
+                margin-top:0%;
+              }
             }
           </style>  
 </head>
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+    <nav [class]="visible? 'navbar is-fixed-top is-transparent expandMenu' : 'navbar is-fixed-top is-transparent'" 
+      class="navbar is-fixed-top is-transparent fromTop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <div class="navbar-item">
             <img src="logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox" width="28" height="28">
+          </div>
+          <div class="navbar-item menu-item">
+              <a
+              [text]="visible ? 'Close' : 'Menu'" on="tap:AMP.setState({visible: !visible})" 
+                id="menu-button" 
+                class="button is-normal is-rounded">
+                Menu
+              </a>
           </div>
         </div>
     </nav>
