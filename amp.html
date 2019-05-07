@@ -44,11 +44,12 @@
             .menu-item{
               margin-left: auto;
             }
-            #menu-button{
+            .menu-button{
               background-color: transparent;
               color: white;
               border: none;
               text-shadow: .5px .5px 2px black;
+              transition: all ease-in-out 0.5s;
             }
             .column{
               height: 100vh;
@@ -77,6 +78,12 @@
               box-shadow: 1px 1px 10px 0px #000000;
               transition: max-height ease-in-out 0.5s;
             }
+
+            .blackText{
+              color: black;
+              text-shadow: none;
+              transition: all ease-in-out 0.5s;
+             }
 
             .fromTop {
               animation-duration: 1.5s;
@@ -107,8 +114,8 @@
           <div class="navbar-item menu-item">
               <a
               [text]="visible ? 'Close' : 'Menu'" on="tap:AMP.setState({visible: !visible})" 
-                id="menu-button" 
-                class="button is-normal is-rounded">
+                [class]="visible? 'button is-normal is-rounded blackText menu-button' : 'button is-normal is-rounded menu-button'"
+                class="button is-normal is-rounded menu-button">
                 Menu
               </a>
           </div>
