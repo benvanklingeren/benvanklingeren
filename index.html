@@ -1,375 +1,66 @@
 <!DOCTYPE html>
 <meta name="theme-color" content="#03a9f4">
-<html class="mdc-typography">
+<html>
   <head>
     <title>Ben van Klingeren</title>
+    <link rel="amphtml" href="https://www.benvanklingeren.nl/amp.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href ="css/style.css">
     <link rel="stylesheet" href="css/iconFont/styles.css">
-    <script src="material-components-web/dist/material-components-web.js" charset="utf-8"></script>
     <script src="script/script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="material-components-web/dist/material-components-web.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#ffffff">
 
   </head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
-    <div class="container">
-      <div class="mobile">
-        <header id="header" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
-          <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start toolbar">
-              <!--<span class="mdc-toolbar__title">Title</span>-->          
-              <img id="logo" src="android-chrome-192x192.png" alt="Logo">
-              <button id="twitterButton" class="mdc-button mdc-button--flat" data-mdc-auto-init="MDCRipple" onclick="window.location.href='https://twitter.com/BenVanKlingeren'">
-                <span class="icon-twitter"> </span> TWITTER
-              </button>
-            
-              <button id="linkedinButton" class="mdc-button mdc-button--flat" data-mdc-auto-init="MDCRipple" onclick="window.location.href='https://www.linkedin.com/in/ben-van-klingeren-00a80b144'">
-                <span class="icon-linkedin"> </span> LINKEDIN
-              </button>
-            </section>
+      <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+          <div class="mdl-tabs__tab-bar">
+            <a href="#about-panel" class="mdl-tabs__tab is-active">About the Beatles</a>
+            <a href="#members-panel" class="mdl-tabs__tab">Members</a>
+            <a href="#albums-panel" class="mdl-tabs__tab">Discography</a>
           </div>
-        </header>
-    </div>
-  
-
-
-<script>
-  var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
-  toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
-</script>
-    <div class="container-center-big">
-      <div class="container-center">
-
-        <div id="introCard" class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo card imageCard">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Ben van Klingeren</h1>
-            <h2 class="mdc-card__subtitle">Bachelor Computer Science (Gametechnology)</h2>
-          </section>
-        </div>        
-        <div class="fractionCards">
-          <div class="mdc-card card leftCard">
-            <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">Interests</h1>
-            </section>
-            <section class="mdc-card__supporting-text">
-                <ul class="mdc-list"> 
-                    <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true" style="color:coral;">toys</i>3D Printing</li>
-                    <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true" style="color:#289121;">camera_enhance</i>Computational Photography</li>
-                    <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true" style="color:#e23d3d;">device_hub</i>Artificial Intelligence</li>
-                  </ul>
-            </section>
-          </div> 
-
-          <div class="mdc-card card rightCard">
-              <section class="mdc-card__primary">
-                <h1 class="mdc-card__title mdc-card__title--large">Experience</h1>
-              </section>
-              <section class="mdc-card__supporting-text">
-                  <ul class="mdc-list"> 
-                      <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true" style="color:#03a9f4;">network_wifi</i>Web Development</li>
-                      <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true" style="color:darkslateblue">memory</i>C Programming</li>
-                      <li class="mdc-list-item"><i class="mdc-list-item__start-detail material-icons" aria-hidden="true"></i></li>
-                    </ul>
-              </section>
-            </div>
-        </div>
-
-        <div class="fabWrapper nonMobile">
-          <div class="fabAnimation" onmouseover="switchIcon(), moveFABs()" onmouseout="moveFABsBack(), switchBack()">
-            <button id="fab" class="mdc-fab material-icons makeVisible" data-mdc-auto-init="MDCRipple">
-                <i id="fabIcon" class="material-icons">add</i>
-            </button>
-            <button id="twitter" class="mdc-fab mdc-fab--mini material-icons makeVisible" onclick="window.location.href='https://twitter.com/BenVanKlingeren'" data-mdc-auto-init="MDCRipple">
-                <span class="icon-twitter"> </span> 
-            </button>
-            <button id="linkedin" class="mdc-fab mdc-fab--mini material-icons makeVisible" onclick="window.location.href='https://www.linkedin.com/in/ben-van-klingeren-00a80b144'" data-mdc-auto-init="MDCRipple">
-                <span class="icon-linkedin"> </span> 
-            </button>
+          <div class="mdl-tabs__panel is-active" id="about-panel">
+            <p><b>The Beatles</b> were a four-piece musical group from Liverpool, England.
+            Formed in 1960, their career spanned just over a decade, yet they are widely
+            regarded as the most influential band in history.</p>
+            <p>Their songs are among the best-loved music of all time. It is said that every
+            minute of every day, a radio station somewhere is playing a Beatles song.</p>
+          </div>
+          <div class="mdl-tabs__panel" id="members-panel">
+            <p>The Beatles' members were:</p>
+            <ul>
+              <li>John Lennon (1940-1980)</li>
+              <li>Paul McCartney (1942-)</li>
+              <li>George Harrison (1943-2001)</li>
+              <li>Ringo Starr (1940-)</li>
+            </ul>
+          </div>
+          <div class="mdl-tabs__panel" id="albums-panel">
+            <p>The Beatles' original UK LPs, in order of release:</p>
+            <ol>
+              <li>Please Please Me (1963)</li>
+              <li>With the Beatles (1963)</li>
+              <li>A Hard Day's Night (1964)</li>
+              <li>Beatles for Sale (1964)</li>
+              <li>Help! (1965)</li>
+              <li>Rubber Soul (1965)</li>
+              <li>Revolver (1966)</li>
+              <li>Sgt. Pepper's Lonely Hearts Club Band (1967)</li>
+              <li>The Beatles ("The White Album", 1968)</li>
+              <li>Yellow Submarine (1969)</li>
+              <li>Abbey Road (1969)</li>
+              <li>Let It Be (1970)</li>
+            </ol>
           </div>
         </div>
-      
-      </div>
-
-
-
-
-
-      <div class="container-center">
-
-      <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            He sat in a wheeled chair, waiting for dark,
-            And shivered in his ghastly suit of grey,
-            Legless, sewn short at elbow. Through the park 
-            Voices of boys rang saddening like a hymn, 
-            Voices of play and pleasure after day, 
-            Till gathering sleep had mothered them from him. 
-            
-            About this time Town used to swing so gay 
-            When glow-lamps budded in the light-blue trees, 
-            And girls glanced lovelier as the air grew dim,— 
-            In the old times, before he threw away his knees. 
-            Now he will never feel again how slim 
-            Girls' waists are, or how warm their subtle hands, 
-            All of them touch him like some queer disease. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-
-        <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            He sat in a wheeled chair, waiting for dark,
-            And shivered in his ghastly suit of grey,
-            Legless, sewn short at elbow. Through the park 
-            Voices of boys rang saddening like a hymn, 
-            Voices of play and pleasure after day, 
-            Till gathering sleep had mothered them from him. 
-            
-            About this time Town used to swing so gay 
-            When glow-lamps budded in the light-blue trees, 
-            And girls glanced lovelier as the air grew dim,— 
-            In the old times, before he threw away his knees. 
-            Now he will never feel again how slim 
-            Girls' waists are, or how warm their subtle hands, 
-            All of them touch him like some queer disease. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-        
-        <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            One time he liked a blood-smear down his leg, 
-            After the matches carried shoulder-high. 
-            It was after football, when he'd drunk a peg,
-            He thought he'd better join. He wonders why.
-            Someone had said he'd look a god in kilts. 
-            That's why; and maybe, too, to please his Meg, 
-            Aye, that was it, to please the giddy jilts, 
-            He asked to join. He didn't have to beg; 
-            Smiling they wrote his lie: aged nineteen years.
-            Germans he scarcely thought of, all their guilt,
-            And Austria's, did not move him. And no fears 
-            Of Fear came yet. He thought of jewelled hilts 
-            For daggers in plaid socks; of smart salutes; 
-            And care of arms; and leave; and pay arrears; 
-            Esprit de corps; and hints for young recruits. 
-            And soon, he was drafted out with drums and cheers. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-
-        </div>
-
-
-
-
-
-        <div class="container-center">
-
-      <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            There was an artist silly for his face, 
-            For it was younger than his youth, last year. 
-            Now, he is old; his back will never brace; 
-            He's lost his colour very far from here, 
-            Poured it down shell-holes till the veins ran dry, 
-            And half his lifetime lapsed in the hot race 
-            And leap of purple spurted from his thigh. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-
-        <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            One time he liked a blood-smear down his leg, 
-            After the matches carried shoulder-high. 
-            It was after football, when he'd drunk a peg,
-            He thought he'd better join. He wonders why.
-            Someone had said he'd look a god in kilts. 
-            That's why; and maybe, too, to please his Meg, 
-            Aye, that was it, to please the giddy jilts, 
-            He asked to join. He didn't have to beg; 
-            Smiling they wrote his lie: aged nineteen years.
-            Germans he scarcely thought of, all their guilt,
-            And Austria's, did not move him. And no fears 
-            Of Fear came yet. He thought of jewelled hilts 
-            For daggers in plaid socks; of smart salutes; 
-            And care of arms; and leave; and pay arrears; 
-            Esprit de corps; and hints for young recruits. 
-            And soon, he was drafted out with drums and cheers. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-        <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            He sat in a wheeled chair, waiting for dark,
-            And shivered in his ghastly suit of grey,
-            Legless, sewn short at elbow. Through the park 
-            Voices of boys rang saddening like a hymn, 
-            Voices of play and pleasure after day, 
-            Till gathering sleep had mothered them from him. 
-            
-            About this time Town used to swing so gay 
-            When glow-lamps budded in the light-blue trees, 
-            And girls glanced lovelier as the air grew dim,— 
-            In the old times, before he threw away his knees. 
-            Now he will never feel again how slim 
-            Girls' waists are, or how warm their subtle hands, 
-            All of them touch him like some queer disease. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-
-      </div>
-
-
-
-
-
-      <div class="container-center">
-
-      <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            One time he liked a blood-smear down his leg, 
-            After the matches carried shoulder-high. 
-            It was after football, when he'd drunk a peg,
-            He thought he'd better join. He wonders why.
-            Someone had said he'd look a god in kilts. 
-            That's why; and maybe, too, to please his Meg, 
-            Aye, that was it, to please the giddy jilts, 
-            He asked to join. He didn't have to beg; 
-            Smiling they wrote his lie: aged nineteen years.
-            Germans he scarcely thought of, all their guilt,
-            And Austria's, did not move him. And no fears 
-            Of Fear came yet. He thought of jewelled hilts 
-            For daggers in plaid socks; of smart salutes; 
-            And care of arms; and leave; and pay arrears; 
-            Esprit de corps; and hints for young recruits. 
-            And soon, he was drafted out with drums and cheers. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div> 
-
-        
-        <div class="mdc-card card">
-          <section class="mdc-card__primary">
-            <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-            <h2 class="mdc-card__subtitle">Subtitle here</h2>
-          </section>
-          <section class="mdc-card__supporting-text">
-            One time he liked a blood-smear down his leg, 
-            After the matches carried shoulder-high. 
-            It was after football, when he'd drunk a peg,
-            He thought he'd better join. He wonders why.
-            Someone had said he'd look a god in kilts. 
-            That's why; and maybe, too, to please his Meg, 
-            Aye, that was it, to please the giddy jilts, 
-            He asked to join. He didn't have to beg; 
-            Smiling they wrote his lie: aged nineteen years.
-            Germans he scarcely thought of, all their guilt,
-            And Austria's, did not move him. And no fears 
-            Of Fear came yet. He thought of jewelled hilts 
-            For daggers in plaid socks; of smart salutes; 
-            And care of arms; and leave; and pay arrears; 
-            Esprit de corps; and hints for young recruits. 
-            And soon, he was drafted out with drums and cheers. 
-          </section>
-          <section class="mdc-card__actions">
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
-          </section>
-        </div>         
-      </div>
-    </div>
-
-      <div class="container-bottom">
-      <p id="footer" class="mdc-typography--body1">website created by Ben van Klingeren.</p>
-      </div>      
-    </div>  
-    <div class="mobile">
-    <div id="mobileBottomBar" class="mdc-toolbar mdc-toolbar--fixed">
-        <div class="mdc-toolbar__row">
-            <div id="home" class="mobileBottomBarItem mdc-button" data-mdc-auto-init="MDCRipple" onclick="move(0), removeHover(), addHover(this.id)">
-              <i class="material-icons md-24">home</i> 
-              <p>HOME</p>
-            </div>
-            <div id="projects" class="mobileBottomBarItem mdc-button" data-mdc-auto-init="MDCRipple" onclick="removeHover(), move(100), addHover(this.id)">
-              <i class="material-icons md-24">explore</i>
-              <p>PROJECTS</p>
-            </div>
-            <div id="resume" class="mobileBottomBarItem mdc-button" data-mdc-auto-init="MDCRipple" onclick="removeHover(), move(200), addHover(this.id)">
-              <i class="material-icons md-24">insert_drive_file</i>
-              <p>RÉSUMÉ</p></div>
-            <div id="contact" class="mobileBottomBarItem mdc-button" data-mdc-auto-init="MDCRipple" onclick="removeHover(), move(300), addHover(this.id)">
-              <i class="material-icons md-24">mail</i>
-              <p>CONTACT</p>
-            </div>
-        </div>
-    </div>
-    </div>
-</main>
-    <script src="material-components-web/dist/material-components-web.js"></script>
-    <script>
-      mdc.autoInit()
-    </script>
-  </body>
+   </body>
 </html>
