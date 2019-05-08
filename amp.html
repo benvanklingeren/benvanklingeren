@@ -11,7 +11,6 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -32,7 +31,7 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
             body {
-              background-color: #29434e;
+              background-color: black;
               font-family: Roboto;
             }
             amp-img {
@@ -56,14 +55,17 @@
               transition: all ease-in-out 0.5s;
             }
             .column{
-              height: 100vh;
+              min-height: 110vh;
               display: flex;
               align-items: center;
-              opacity: 0.0;
+              padding-left: 1.5rem;
+              padding-right: 1.5rem;
+              background-position: center;
             }
             .card{
               border-radius: 5px;
               flex-grow: 1;
+              position: relative;
             }
             .myMenu{
               z-index: 20;
@@ -111,6 +113,10 @@
               animation-name: fromTop;
             }
 
+            .mainSection{
+              padding: 0px;
+            }
+
             amp-img{
               border: none;
             }
@@ -138,6 +144,25 @@
                 transform: translateX(0px);
                 opacity: 1.0;
               }
+            }
+
+            @keyframes fade {
+              from{
+                opacity: 0.0; 
+              }
+              50%{
+                opacity: 1.0;
+              }
+              to{
+                opacity: 0.0;
+              }
+            }
+
+            #pathColumn{
+              background-image: url("images/pathtracer.jpg");
+            }
+            #elseColumn{
+              background-image: url("images/else.jpg");
             }
 
           </style>  
@@ -185,8 +210,19 @@
     <section class="section mainSection">
       <div class="container">
         <div class="columns">
-          <div id="path" class="column">
-            <div class="card">
+          <div id="pathColumn" class="column">
+              <amp-animation id="pathFade" layout="nodisplay">
+                  <script type="application/json">
+                    { "duration": "3s", "fill": "both", "animations": [{ "selector": "#pathColumn", "keyframes": "fade" }]}
+                  </script>
+                </amp-animation>
+              <amp-position-observer
+                intersection-ratios="0.1"
+                easing="ease-in-out"
+                on="scroll:pathFade.seekTo(percent=event.percent)"
+                layout="nodisplay">
+              </amp-position-observer>
+            <div id="path" class="card">
                 <amp-animation id="pathSlide" layout="nodisplay">
                     <script type="application/json">
                       { "duration": "0.25s", "fill": "both", "animations": [{ "selector": "#path", "keyframes": "slide" }]}
@@ -209,15 +245,19 @@
             </div>
           </div>
           
-          <amp-img amp-fx="fade-in-scroll" 
-          data-repeat width="100vh" 
-          height="100vh" 
-          layout="responsive" 
-          src="images/pathtracer.jpg" 
-          alt="Picture of a tennis court">
-        </amp-img>
-          <div id="else" class="column">
-              <div class="card">
+        <div id="elseColumn" class="column">
+            <amp-animation id="elseFade" layout="nodisplay">
+                <script type="application/json">
+                  { "duration": "3s", "fill": "both", "animations": [{ "selector": "#elseColumn", "keyframes": "fade" }]}
+                </script>
+              </amp-animation>
+            <amp-position-observer
+              intersection-ratios="0.1"
+              easing="ease-in-out"
+              on="scroll:elseFade.seekTo(percent=event.percent)"
+              layout="nodisplay">
+            </amp-position-observer>
+              <div id="else" class="card">
                   <amp-animation id="elseSlide" layout="nodisplay">
                       <script type="application/json">
                         { "duration": "0.25s", "fill": "both", "animations": [{ "selector": "#else", "keyframes": "slide" }]}
