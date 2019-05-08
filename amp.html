@@ -11,6 +11,7 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -58,6 +59,7 @@
               height: 100vh;
               display: flex;
               align-items: center;
+              opacity: 0.0;
             }
             .card{
               border-radius: 5px;
@@ -109,6 +111,10 @@
               animation-name: fromTop;
             }
 
+            amp-img{
+              border: none;
+            }
+
             @keyframes fromTop {
               from {
                 margin-top:-10%;
@@ -122,25 +128,21 @@
                 margin-top:0%;
               }
             }
-            .mainSection{
-              padding: 0px;
-            }
-            .pathTracer{
-              background-image: url(images/pathtracer.jpg);
-              background-position: center;
-              background-size: auto;
-            }
-            .column{
-              background: #29434e;
-              transition: background 300ms ease-in 500ms;
-            }
-            .transparentBackground{
-              background: transparent;
+
+            @keyframes slide {
+              from{
+                transform: translateX(200px);
+                opacity: 0.0; 
+              }
+              to{
+                transform: translateX(0px);
+                opacity: 1.0;
+              }
             }
 
           </style>  
 </head>
-  <body>
+<body>
     <nav class="navbar is-fixed-top is-transparent fromTop" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://benvanklingeren.nl/amp.html">
@@ -182,46 +184,51 @@
     </div>
     <section class="section mainSection">
       <div class="container">
-        <div class="columns"
-        [class]="path? 'columns' : 'columns pathTracer'">
-
-        <amp-animation id="clockAnim" layout="nodisplay">
-            <script type="application/json">
-              {
-              "duration": "1s",
-              "fill": "both",
-              "direction": "alternate",
-              "animations": [
-                {
-                  "selector": ".pathTracerColumn",
-                  "keyframes": [
-                    { "transform": "rotate(-180deg)" },
-                    { "transform": "rotate(0deg)" }
-                  ]
-                }
-              ]
-            }
-            </script>
-          </amp-animation>
-          <div class="column pathTracerColumn"
-          [class]="path? 'column' : 'column transparentBackground'">
+        <div class="columns">
+          <div id="path" class="column">
             <div class="card">
+                <amp-animation id="pathSlide" layout="nodisplay">
+                    <script type="application/json">
+                      { "duration": "0.25s", "fill": "both", "animations": [{ "selector": "#path", "keyframes": "slide" }]}
+                    </script>
+                  </amp-animation>
                 <amp-position-observer
                 intersection-ratios="0.5"
-                on="enter:clockAnim.start"
+                easing="ease-in-out"
+                on="enter:pathSlide.start; exit:pathSlide.start,pathSlide.reverse"
                 layout="nodisplay">
               </amp-position-observer>
               <div class="card-content">     
-                <div class="media-content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
+                <p class="title">
+                  CPU Path Tracer
+                </p>
+                <div class="content">
+                  Small summary about what we did idk
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="column">
+          <amp-img amp-fx="fade-in-scroll" 
+          data-repeat width="100vh" 
+          height="100vh" 
+          layout="responsive" 
+          src="images/pathtracer.jpg" 
+          alt="Picture of a tennis court">
+        </amp-img>
+          <div id="else" class="column">
               <div class="card">
+                  <amp-animation id="elseSlide" layout="nodisplay">
+                      <script type="application/json">
+                        { "duration": "0.25s", "fill": "both", "animations": [{ "selector": "#else", "keyframes": "slide" }]}
+                      </script>
+                    </amp-animation>
+                  <amp-position-observer
+                  intersection-ratios="0.5"
+                  easing="ease-in-out"
+                  on="enter:elseSlide.start; exit:elseSlide.start,elseSlide.reverse"
+                  layout="nodisplay">
+                </amp-position-observer>
                 <div class="card-content">     
                   <div class="media-content">
                     <p class="title is-4">John Smith</p>
@@ -230,7 +237,7 @@
                 </div>
               </div>
             </div>
-            
+
         </div>
       </div>
     </section>
