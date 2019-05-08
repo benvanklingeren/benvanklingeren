@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -81,6 +83,7 @@
             }
             .menuSection{
               padding-bottom: 0.5rem;
+              padding-top: 4rem;
             }
             .actualMenu{
               font-size: 1.25rem;
@@ -119,6 +122,22 @@
                 margin-top:0%;
               }
             }
+            .mainSection{
+              padding: 0px;
+            }
+            .pathTracer{
+              background-image: url(images/pathtracer.jpg);
+              background-position: center;
+              background-size: auto;
+            }
+            .column{
+              background: #29434e;
+              transition: background 300ms ease-in 500ms;
+            }
+            .transparentBackground{
+              background: transparent;
+            }
+
           </style>  
 </head>
   <body>
@@ -161,12 +180,37 @@
         </aside>
       </section>
     </div>
-    <section class="section">
+    <section class="section mainSection">
       <div class="container">
-        <div class="columns">
+        <div class="columns"
+        [class]="path? 'columns' : 'columns pathTracer'">
 
-          <div class="column">
+        <amp-animation id="clockAnim" layout="nodisplay">
+            <script type="application/json">
+              {
+              "duration": "1s",
+              "fill": "both",
+              "direction": "alternate",
+              "animations": [
+                {
+                  "selector": ".pathTracerColumn",
+                  "keyframes": [
+                    { "transform": "rotate(-180deg)" },
+                    { "transform": "rotate(0deg)" }
+                  ]
+                }
+              ]
+            }
+            </script>
+          </amp-animation>
+          <div class="column pathTracerColumn"
+          [class]="path? 'column' : 'column transparentBackground'">
             <div class="card">
+                <amp-position-observer
+                intersection-ratios="0.5"
+                on="enter:clockAnim.start"
+                layout="nodisplay">
+              </amp-position-observer>
               <div class="card-content">     
                 <div class="media-content">
                   <p class="title is-4">John Smith</p>
@@ -192,9 +236,8 @@
     </section>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          website created by Ben van Klingeren 
-        </p>
+        <p> Website created by Ben van Klingeren </p>
+        <a href="https://icons8.com">Icons by Icons8</a>
       </div>
     </footer>
   </body>
