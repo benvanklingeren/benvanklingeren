@@ -8,8 +8,6 @@
     <link rel="canonical" href="http://localhost/documentation/guides-and-tutorials/start/create/basic_markup">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -44,8 +42,10 @@
             .menu-item{
               margin-left: auto;
             }
-            .menu-button{
+            .noSelect{
               -webkit-tap-highlight-color: transparent;
+            }
+            .menu-button{
               background-color: transparent;
               color: white !important;
               border: none;
@@ -61,7 +61,7 @@
               border-radius: 5px;
               flex-grow: 1;
             }
-            .menu{
+            .myMenu{
               z-index: 20;
               height:auto;
               position: fixed;
@@ -71,15 +71,27 @@
               border-bottom-right-radius: 5px;
               background-color: white;
               overflow: hidden;
-              transition: max-height ease-in-out 0.5s;
+              transition: max-height ease-in-out 0.3s;
             }
 
             .expandMenu{
-              max-height:200px;
+              max-height:400px;
               box-shadow: 1px 1px 10px 0px #000000;
-              transition: max-height ease-in-out 0.5s;
+              transition: max-height ease-in-out 0.3s;
             }
-
+            .menuSection{
+              padding-bottom: 0.5rem;
+            }
+            .socialButton{
+              width: 32px;
+              height: 32px;
+            }
+            .socialContainer{
+              display: flex;
+              justify-content: space-evenly;
+              margin-top: 2rem;
+              margin-bottom: 0.5rem;
+            }
             .blackText{
               color: black !important;
               text-shadow: none;
@@ -115,20 +127,36 @@
           <div class="navbar-item menu-item">
               <a
               [text]="visible ? 'Close' : 'Menu'" on="tap:AMP.setState({visible: !visible})" 
-                [class]="visible? 'blackText menu-button button' : 'menu-button button'"
-                class="menu-button button">
+                [class]="visible? 'blackText menu-button button noSelect' : 'menu-button button noSelect'"
+                class="menu-button button noSelect">
                 Menu
               </a>
           </div>
         </div>
     </nav>
-    <div [class]="visible? 'menu expandMenu' : 'menu'"
-         class="menu">
-         <section class="section">
-           <div class="container">
-             <p>I'm a menu</p>
-            </div>
-        </section>
+    <div [class]="visible? 'myMenu expandMenu' : 'myMenu'"
+         class="myMenu">
+      <section class="section menuSection">
+        <aside class="menu">
+            <ul class="menu-list noSelect">
+                <li><a href="https://benvanklingeren.nl/amp.html">Home</a></li>
+                <li><a>About me</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Resumé</a></li>
+              </ul>
+              <div class="container socialContainer">
+                <a class="socialButton noSelect" href="mailto:benvanklingeren@gmail.com?subject=Hi">
+                  <img src="https://img.icons8.com/material/48/000000/gmail.png">
+                </a>
+                <a class="socialButton noSelect" href="https://www.instagram.com/benvklingeren/">
+                  <img src="https://img.icons8.com/material-outlined/48/000000/instagram-new.png">
+                </a>
+                <a class="socialButton noSelect" href="https://www.linkedin.com/in/ben-van-klingeren-00a80b144">
+                    <img src="https://img.icons8.com/material-outlined/48/000000/linkedin.png">
+                </a>
+              </div>
+        </aside>
+      </section>
     </div>
     <section class="section">
       <div class="container">
